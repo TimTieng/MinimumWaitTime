@@ -16,7 +16,8 @@ namespace MinimumWaitTime
             // Iterate through the array, update the value of executionTime at each index
             for (int i = 0; i < queryTimes.Length; i++)
             {
-                // min time = value at index 0  * (remaining query execution time)
+                // min time = value at index 0  * (remaining query execution time values)
+                // at i =0; executionTime = 1 * (5 - (0+1)) => 4
                 executionTime += queryTimes[i] * (queryTimes.Length - (i + 1));
             }
             // Present minimum time to user
